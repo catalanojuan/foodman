@@ -1,0 +1,16 @@
+
+.caption{
+  text-align: center;
+}
+.centered{
+  text-align: center;
+}
+.red-button{
+  background: url('/static/images/red-button.jpeg') no-repeat;
+  height: 230px;
+  width: 230px;
+  border: none;
+}
+.thumbnail{
+  height: 200px;
+}

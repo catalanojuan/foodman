@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+      <div class="page-header">
+        <h1 class="centered">Choose your Food Manager</h1>
+      </div>
+        {% if choices %}
+          <div class="row-fluid">
+            <ul class="thumbnails">
+              {% for foodman in choices %}
+              <li class="span4">
+                <div class="thumbnail">
+                  <img src="{{foodman.avatar_set.all.0.avatar.url}}" class="img-rounded" style="max-height: 70%;">
+                  <div class="caption">
+                  <h3>{{foodman.username|upper}}</h3>
+                  </div>
+                </div>
+              </li>
+              {% if forloop.counter|divisibleby:"3" or forloop.last %}
+                </ul>
+                {% if not forloop.last %}
+                <ul class="thumbnails">
+                {% endif %}
+              {% endif %}
+              {% endfor %}
+          </div>
+        {% else %}
+        {% if message %}
+        <div class='alert alert-error'>{{message}}</div>
+        {% endif %}
+          <form action="{% url choose_foodman %}" method="get" class='centered'>{% csrf_token %}
+            <button type="submit" class="red-button lead"><h2>Choose!</h2></button>
+            <h2>{{ form.num_choices }}</h2>
+          </form>
+        {% endif %}
+{% endblock content %}

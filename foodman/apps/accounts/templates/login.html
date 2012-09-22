@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Login</h1>
+  {% if message %}
+  <div class='alert alert-error'>{{message}}</div>
+  {% endif %}
+  <form action='{% url login %}' method='POST'>{% csrf_token %}
+    {{ form.as_p }}
+    <input type='Submit' value='Login'/>  
+  </form>
+{% endblock content %}

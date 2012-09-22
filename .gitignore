@@ -1,0 +1,4 @@
+foodman/static
+static/media/images/
+*.sw[op]
+*.pyc
