@@ -1,4 +1,4 @@
-foodman
+Foodman
 =======
 
-Django app to solve the problem of choosing someone to manage The Food Problem.
+Django app to solve the eternal problem of choosing someone to manage the Food Issue.
