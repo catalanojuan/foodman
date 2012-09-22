@@ -9,7 +9,7 @@
               {% for foodman in choices %}
               <li class="span4">
                 <div class="thumbnail">
-                  <img src="{{foodman.avatar_set.all.0.avatar.url}}" class="img-rounded" style="max-height: 70%;">
+                  <img src="{{foodman.avatar_set.all.0.avatar_url}}" class="img-rounded" style="max-height: 70%;">
                   <div class="caption">
                   <h3>{{foodman.username|upper}}</h3>
                   </div>
